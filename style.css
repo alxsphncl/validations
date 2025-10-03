@@ -1,0 +1,110 @@
+html, body {
+  scroll-behavior: smooth;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0d6efd; 
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link:focus::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f8d210;               
+  transform: scale(1.1);        
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link.active {
+  color: #fff;
+  text-shadow: 0 0 8px #0d6efd, 0 0 12px #0d6efd;
+}
+
+
+.section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#home h1 {
+  font-family: 'Agbalumo', serif;   
+  font-size: 5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: left;                 
+  margin-left: 0;                 
+}
+
+.bg-home       { background-image: url('Second/Home.jpg'); }
+.bg-characters { background-image: url('Second/Grandline2.jpg'); }
+.bg-adventures { background-image: url('Second/Grandline2.jpg'); }
+.bg-about      { background-image: url('Second/aboutus.jpg'); }
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.35);
+  z-index: 0;
+}
+.section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.home-img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.char-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.adventure-img {
+  height: 250px;
+  object-fit: cover;
+}
+
+#characters .card-title,
+#adventures .card-title {
+  font-family: 'Alkatra', cursive;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #000000; 
+}
+
+.section h2 {
+  font-family: 'Knewave', cursive; 
+  font-size: 3rem;                 
+  text-transform: uppercase;       
+  letter-spacing: 2px;            
+  color: #f8d210;                 
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
